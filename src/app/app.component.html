@@ -1,0 +1,114 @@
+<ion-app [class.dark-theme]="dark">
+  <mat-toolbar class="toolbar mat-elevation-z7" role="banner" fxHide fxShow.xs="true" fxShow.sm="true">
+    <div id="left-spacer"></div>
+    <div class="menu-collapsed">
+      <div class="bar"></div>
+      <nav>
+        <ul>
+          <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+          <li><a routerLink="/background-mobile" routerLinkActive="active">Background</a></li>
+          <li><a routerLink="/skill" routerLinkActive="active">Skills</a></li>
+          <li><a routerLink="/project" routerLinkActive="active">Projects</a></li>
+          <li><a routerLink="/recording" routerLinkActive="active">Recordings</a></li>
+          <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+          <li><a routerLink="/version" routerLinkActive="active">Previous Versions</a></li>
+        </ul>
+      </nav>
+    </div>
+  </mat-toolbar>
+  <ion-split-pane contentId="main-content">
+
+    <ion-menu role="navigation" contentId="main-content">
+      <ion-header>
+        <ion-toolbar>
+          <ion-title id="menu-title">Menu</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+
+        <ion-menu-toggle autoHide="false">
+          <ion-item lines="none" routerLink="/home" routerLinkActive="active" routerDirection="root" detail="false">
+            <ion-icon slot="start" name="home"></ion-icon>
+            <ion-label>
+              Home
+            </ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+
+        <ion-list>
+          <ion-list-header>
+            Career
+          </ion-list-header>
+
+          <ion-menu-toggle autoHide="false">
+            <ion-item lines="none" routerLink="/background" routerLinkActive="active" routerDirection="root"
+              detail="false">
+              <ion-icon slot="start" name="bookmarks"></ion-icon>
+              <ion-label>
+                Background
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle autoHide="false">
+            <ion-item lines="none" routerLink="/skill" routerLinkActive="active" routerDirection="root" detail="false">
+              <ion-icon slot="start" name="build"></ion-icon>
+              <ion-label>
+                Skills
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle autoHide="false">
+            <ion-item lines="none" routerLink="/project" routerLinkActive="active" routerDirection="root"
+              detail="false">
+              <ion-icon slot="start" name="folder"></ion-icon>
+              <ion-label>
+                Projects
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+        </ion-list>
+        <ion-list>
+          <ion-list-header>
+            Other
+          </ion-list-header>
+          <ion-menu-toggle autoHide="false">
+            <ion-item lines="none" routerLink="/recording" routerLinkActive="active" routerDirection="root"
+              detail="false">
+              <ion-icon slot="start" name="log-in"></ion-icon>
+              <ion-label>
+                Music
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle autoHide="false">
+            <ion-item lines="none" routerLink="/contact" routerLinkActive="active" routerDirection="root"
+              detail="false">
+              <ion-icon slot="start" name="log-in"></ion-icon>
+              <ion-label>
+                Contact
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+        <ion-list lines="none">
+          <ion-list-header>
+            Tutorial
+          </ion-list-header>
+        </ion-list>
+        <ion-item lines="none">
+          <ion-icon slot="start" name="moon-outline"></ion-icon>
+          <ion-label>
+            Dark Mode
+          </ion-label>
+          <ion-toggle [(ngModel)]="dark"></ion-toggle>
+        </ion-item>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content" main></ion-router-outlet>
+  </ion-split-pane>
+
+</ion-app>

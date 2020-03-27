@@ -1,0 +1,44 @@
+section {
+  background-color: transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+// Recording
+
+* {
+  -webkit-backface-visibility: hidden;
+}
+
+#recording-container {
+  height: 100vh;
+  background-image: url("../../../assets/img/music-bg.jpg");
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+iframe {
+  width: 50vw;
+}
+
+#recording-title {
+  color: var(--dark-contrast);
+  margin: calc(var(--yellow-border-width) / 2) auto 0;
+}
+
+h1.chris {
+  font-size: 5rem;
+  color: black;
+}
+u {
+  color: var(--yellow-color);
+}
+@media only screen and (max-width: 1023px) {
+  h1 {
+    font-size: 3rem;
+  }
+  iframe {
+    width: 70vw;
+  }
+}

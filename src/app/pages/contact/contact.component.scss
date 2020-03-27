@@ -1,0 +1,166 @@
+h2 {
+  font-weight: 300;
+  font-size: 3em;
+  line-height: 1.2;
+  margin: 0 0 30px;
+}
+h2 strong {
+  font-weight: 700;
+  display: block;
+}
+
+.cards {
+  width: 768px;
+  height: 550px;
+  margin: auto;
+  background-color: lightyellow;
+  position: relative;
+  border-radius: 7px;
+}
+
+.card-control {
+  display: none;
+}
+.card-control:checked + .card {
+  -webkit-clip-path: circle(270% at 50px 88%);
+  clip-path: circle(270% at 50px 88%);
+  z-index: 500;
+  -webkit-transition: -webkit-clip-path 2s ease;
+  transition: -webkit-clip-path 2s ease;
+  transition: clip-path 2s ease;
+  transition: clip-path 2s ease, -webkit-clip-path 2s ease;
+}
+.card-control:checked + .card .col--right {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.card {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  padding: 10% 5%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 7px;
+  overflow: hidden;
+  -webkit-clip-path: circle(20px at 50px 90%);
+  clip-path: circle(20px at 50px 90%);
+  -webkit-transition: -webkit-clip-path 0s 1s;
+  transition: -webkit-clip-path 0s 1s;
+  transition: clip-path 0s 1s;
+  transition: clip-path 0s 1s, -webkit-clip-path 0s 1s;
+  z-index: 300;
+  box-sizing: border-box;
+}
+.card--facebook {
+  color: #fff;
+  background-color: #3b5998;
+  -webkit-clip-path: circle(0 at 65px 90%);
+  clip-path: circle(0 at 65px 90%);
+}
+.card--instagram {
+  color: #fff;
+  background: #f09433;
+  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+
+  -webkit-clip-path: circle(0 at 145px 90%);
+  clip-path: circle(0 at 145px 90%);
+}
+.card--twitter {
+  color: #fff;
+  background-color: #7fd0ed;
+  -webkit-clip-path: circle(0 at 225px 90%);
+  clip-path: circle(0 at 225px 90%);
+}
+.card--github {
+  color: #fff;
+  background-color: #1d1f20;
+  -webkit-clip-path: circle(0 at 305px 90%);
+  clip-path: circle(0 at 305px 90%);
+}
+.card--linkedin {
+  color: #fff;
+  background-color: #0072b1;
+  -webkit-clip-path: circle(0 at 305px 90%);
+  clip-path: circle(0 at 305px 90%);
+}
+.col {
+  max-width: 50%;
+}
+.col--right {
+  padding-top: 60px;
+  opacity: 0;
+  -webkit-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+  -webkit-transition: 0.4s ease 0.2s;
+  transition: 0.4s ease 0.2s;
+}
+
+.main-nav {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  z-index: 1000;
+}
+.main-nav__item {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  line-height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.main-nav__item.active,
+.main-nav__item:hover {
+  color: white;
+  border-color: white;
+}
+
+.btn {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 2px solid #fff;
+  border-radius: 7px;
+  color: inherit;
+  text-decoration: none;
+}
+.btn:hover {
+  opacity: 0.5;
+}
+
+section {
+  background-image: url("../../../assets/img/contact/contact-bg.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+p {
+  padding-top: 2rem;
+}
+
+@media screen and (max-width: 1000px) {
+  h2 {
+    font-size: 2.5rem;
+  }
+}

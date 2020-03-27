@@ -1,0 +1,117 @@
+// Ribbon
+.ribbon {
+  background-color: #a00;
+  overflow: hidden;
+  white-space: nowrap;
+  /* top left corner */
+  position: absolute;
+  left: -50px;
+  top: 40px;
+  /* 45 deg ccw rotation */
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  /* shadow */
+  -webkit-box-shadow: 0 0 10px #888;
+  -moz-box-shadow: 0 0 10px #888;
+  box-shadow: 0 0 10px #888;
+  z-index: 3000;
+}
+a:hover {
+  color: goldenrod !important;
+}
+.ribbon a {
+  border: 1px solid #faa;
+  color: #fff;
+  display: block;
+  font: bold 81.25% "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 1px 0;
+  padding: 10px 50px;
+  text-align: center;
+  text-decoration: none;
+  /* shadow */
+  text-shadow: 0 0 5px #444;
+}
+// End Ribbon
+
+.mat-card-image.projectImg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25vw;
+}
+
+mat-card {
+  max-width: 550px;
+  margin: 2vw auto;
+}
+
+.mat-card-header {
+  justify-content: center;
+}
+.mat-card-subtitle {
+  justify-content: center;
+}
+.mat-card-center {
+}
+
+p {
+  text-align: justify;
+}
+
+/* Styles for the active tab label */
+#projectTabGroup .mat-tab-labels,
+#projectTabGroup .mat-tab-label.mat-tab-label-active,
+#projectTabGroup .mat-tab-group,
+#projectTabGroup .mat-tab-label,
+#projectTabGroup .mat-tab-header,
+#projectTabGroup .mat-tab-label-container,
+#projectTabGroup .mat-tab-list {
+  background-color: transparent !important;
+  color: black;
+}
+
+.mat-card-header {
+  text-align: center;
+}
+.mat-card-header .mat-card-subtitle {
+  font-weight: 475;
+  font-family: "Oswald", sans-serif;
+}
+p {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.mat-tab-body-content {
+  overflow: hidden !important;
+}
+@media only screen and (max-width: 719px) {
+  mat-tab-group {
+    margin-top: 4vw;
+  }
+  mat-card {
+    max-width: 250px;
+    margin: 25vw auto;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  mat-card {
+    min-width: 675px;
+  }
+}
+section {
+  background-image: url("../../../assets/img/project-bg.png");
+  background-position: center;
+  background-size: cover;
+}
+@media screen and (max-width: 1023px) {
+  section {
+    margin-top: 10vw;
+  }
+  mat-card {
+    margin-top: 10vw;
+  }
+}
